@@ -31,3 +31,22 @@ image processing and algorithm development. We have split the competition into
 a series of Tasks which will help you accomplish the above goal of solving
 the problem using an autonomous quadcopter. We'll ride along with you in the
 journey, but it is your's to undertake.
+
+Submission videos' links
+
+Task 1:
+1.1 https://youtu.be/uw1Vpo1eOh0
+1.2 https://youtu.be/ydRtmvwqYEk
+
+Task 3:
+3.1 https://youtu.be/DHblOgvDqA0
+3.2 https://youtu.be/RzhnNOHFCw8
+
+Task 4:
+4.1 https://youtu.be/yqcIugLrV1Q
+
+Task 5:
+https://youtu.be/sDCUoeaNWHI
+
+Bonus Configuration:
+https://www.youtube.com/playlist?list=PLGd4XHoxEo7zm2Hd6kOm09KozMGdkJERK
