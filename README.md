@@ -1,49 +1,33 @@
 # survey_and_rescue
-Package for implementing the eYRC  2019-20 theme Survey and Rescue
+Package for implementing the eYRC 2019-20 theme Survey and Rescue
 
-You will be using this package to implement position control and the task logic in further tasks.
+# Theme
+For millennia, humans have been using land and water to navigate terrain.
+Air travel has revolutionized many facets of our lives, one amongst which
+is identifying and providing relief or rescuing fellow humans and their
+property when their safety is threatened in disasters.
 
-**Changelog for monitor.pyc**
+Advances in materials and electronics have led to a boom in portable aerial
+robots. These can be either user operated or autonomous, with major research
+going on in enhancing their autonomous capabilities. These robots, called
+Unmanned Aerial Vehicles(UAVs) can be classified as multirotors, tiltrotors,
+helicopters, fixed-wing etc.
 
-**v1.5.0**
+Quadcopters, a variety of multirotor aircraft are the most ubiquitous amongst
+these, and in the recent Western India floods of 2019, they have been used
+with great success, by hobbyists, professional photographers and others to
+survey and assess the damage to life and property, and helping to coordinate
+search and rescue operations. Their actions and stories are inspiring and we
+urge you to look them up on the internet. So, what could be a step-up to these
+systems? At present, they are limited in range, size and payload. Autonomous
+light helicopters of course! Manned-light helicopters are widely used in rescue
+situations, making them autonomous and ubiquitous will surely be a concrete
+step forward in this regard.
 
-- Added formerly absent decisionEvent information. Reflects current valid /decision_info in num form
-- Fixed bug of cumulative timer not resetting if new message on topic /decision_info is received midway while servicing other Beacons. Thanks to team #7453 for first highlighting this bug.
-
-**v1.4.0**
-
-- Fixed NoneType bug in updating stats that occured on a edge case.
-
-**v1.3.1**
-
-- Fixed bug in payload_manager, won't execute if no Beacon is selected.
-- Added print statement for Hovering mode when the .pyc file launches
-
-**v1.3.0**
-
-- Added continuous hovering mode to make the monitor feature complete & compatible with the Rulebook
-- Added missing implementation of redundant detections, /detection_info published twice for the same instance of the Beacon now gives a redundant detection the second time.
-- Sending decision_info to location with no beacon or base now leads to /serviced_info FAILURE being sent in addition to earlier versions which only caused stats.incorrectServices to be incremented in /stats_sr and a message being printed.
-- Added strip function to take care of leading and trailing whitespaces
-- The script will no longer evaluate blank lines in .tsv files
-
-**v1.2.0**
--Fixed incorrect variable name while starting from BASE mode
-
-**v1.1.1**
--Added print_time and num_beacons params
-
-**v1.1.0**
-
-- Switched from subscriber queue in Arduino to publisher queue in monitor
-- Async configurable rates of stats, hover monitoring and led publishing
-- Was the first deployed version
-
-**v1.0.0**
--monitor.pyc lights LEDs according to the configuration and timing specified in the Tab-Separated-Value files LED_Config.tsv and LED_Timing.tsv respectively.
--The timeouts are set as per the Rulebook, 30 seconds for both FOOD and MEDICINE (Green and Blue color) Beacons and 10 seconds for RESCUE (Red color) Beacons.
--Hover times over beacons are set to 3, 3, 5 and 5 over FOOD, MEDICINE, RESCUE and BASE respectively.
--It verifies detections published on the topic /detection_info and marks them as correct or incorrect.
-- It verifies decisions published on the topic/decision_info and and marks them as correct or incorrect.
-- If correct, it starts monitoring the setpoint of of the decided location for the hovering time, after the pre-specified amount of cumulative hover time is reached, it sends a SUCCESS message on the serviced_info topic.
-- Else, it adds 1 to incorrect services in the stats message, NOTE: That it will not monitor hovering on the incorrect location and hence not send a Failed or Success message. It is better to think of this as an incorrect service location sent.
+In eYRC 2019-20 we explore an abstracted version of this disaster scenario,
+using a micro-quadcopter which operates autonomously to perform search and
+rescue operations. In the process you will learn concepts in control systems,
+image processing and algorithm development. We have split the competition into
+a series of Tasks which will help you accomplish the above goal of solving
+the problem using an autonomous quadcopter. We'll ride along with you in the
+journey, but it is your's to undertake.
